@@ -25,3 +25,21 @@ export const allProducts = [
     img: img3,
   },
 ];
+
+export type Product = {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  images: string;
+};
+
+export type Users = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  age: number;
+  email: string;
+  username: string;
+  image: string;
+};

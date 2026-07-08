@@ -1,27 +1,20 @@
-import { allProducts } from "@/util/types";
+"use client";
+import { Product } from "@/util/types";
+import { use, useState } from "react";
+import ProductPage from ".";
 
-const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await params;
+const page = ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = use(params);
   console.log("slug:", slug);
 
-  const product = allProducts[parseInt(slug)];
+  const [product, setProduct] = useState<Product>();
+
+  // const product = allProducts[parseInt(slug)];
 
   return (
-    <div>
-      <h1 className="text-amber-600 text-6xl font-bold">
-        Title: {product.title}
-      </h1>
-      <h1 className="text-amber-600 text-6xl font-bold">
-        Title: {product.description}
-      </h1>
-      <h1 className="text-amber-600 text-6xl font-bold">
-        Title: {product.price}
-      </h1>
-
-      <h1 className="text-amber-600 text-6xl font-bold">
-        Title: {product.quantity}
-      </h1>
-    </div>
+    <>
+      <ProductPage abiola={slug} />
+    </>
   );
 };
 

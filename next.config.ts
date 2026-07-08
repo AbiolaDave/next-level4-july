@@ -4,7 +4,12 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    domains: ["images.pexels.com", "google.com", "abiola.com"],
+    domains: [
+      "images.pexels.com",
+      "cdn.dummyjson.com",
+      "cdn.dummyjson.com",
+      "dummyjson.com",
+    ],
   },
 
   reactCompiler: true,
