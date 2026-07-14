@@ -32,6 +32,7 @@ export type Product = {
   description: string;
   category: string;
   images: string;
+  price: number;
 };
 
 export type Users = {
@@ -43,3 +44,13 @@ export type Users = {
   username: string;
   image: string;
 };
+
+export type Cart = {
+  id: number;
+  userId: number;
+  date: string;
+  products: {
+    productId: number;
+    quantity: number;
+  }[];
+}
