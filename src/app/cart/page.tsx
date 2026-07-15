@@ -1,12 +1,19 @@
-import React from 'react'
-import Carts from '.'
+import Carts from ".";
 
-const page = () => {
+const page = async ({
+  searchParams,
+}: {
+  searchParams?: { fail?: string | string[] };
+}) => {
+  // if (searchParams?.fail === "1") {
+  //   throw new Error("Intentional cart error for testing");
+  // }
+
   return (
     <>
-    <Carts />
+      <Carts />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
